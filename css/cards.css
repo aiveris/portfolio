@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,900');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /*background: url(attdributes/beach2.jpg);*/
+    background: #ffff;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 1050px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    transform: skewY(-10deg);
+}
+.container .card{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background: #fff;
+    transition: 0.5s;
+}
+.container .card:before{
+    content:'';
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: 100%;
+    height:15px;
+    background: #00c0f6;
+    transform-origin: bottom;
+    transform: skewx(45deg);
+    transition: 0.5s;
+}
+.container .card:after{
+    content:'';
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 15px;
+    height: 200px;
+    background: #00c0f6;
+    transform-origin: left;
+    transform: skewY(45deg);
+    transition: 0.5s;
+    border-bottom: 200px solid #d9d9d9;
+}
+.container .card:hover{
+    transform: translateY(-40px);
+}
+.container .card .imgBx{
+    position: relative;
+    height: 200px;
+    width: 300px;
+    background: #00c7ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container .card .imgBx{
+    max-width: 400px;
+}
+.container .card .imgBx h3{
+    position: relative;
+    color: black;
+    margin-top: 10px;
+}
+.container .card .content{
+    position: relative;
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+    background: #fff;
+    color: #777;
+    text-align: center;
+}
+.container .card .content:before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(transparent, transparent, rgba(0,0,0,0.1));
+    transform-origin: bottom;
+    transform: skewX(45deg);
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: -1;
+}
+.container .card:hover .content:before{
+    transform: translateY(40px) skewX(45deg);
+    filter: blur(5px);
+    ocupacy: 0.5;
+}
+.container .card:nth-child(1){
+    z-index: 3;
+}
+.container .card:nth-child(2){
+    z-index: 2;
+}
+.container .card:nth-child(3){
+    z-index: 1;
+}
+.menu {
+    width: 100%;
+    overflow: auto;
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 100px;
+}
+
+.menu li {
+    float: left;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    width: 150px;
+    display: block;
+    text-align: center;
+    color: black;
+    font-size: 2em;
+    font-family: sans-serif;
+    padding: 0;
+    transition: 0.6s ease;
+}
+
+.menu li a:hover {
+    color: white;
+    font-size: 2em;
+}
+
+ul li.active a{
+    color: #fff;
+}
+
